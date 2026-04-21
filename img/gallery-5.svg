@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder — hand cream and tools">
+  <rect width="400" height="400" fill="#FAF6F0"/>
+  <ellipse cx="200" cy="340" rx="300" ry="60" fill="#E5DDD3"/>
+  <rect x="80" y="180" width="60" height="160" rx="30" fill="#A8B5A0"/>
+  <rect x="170" y="140" width="80" height="200" rx="16" fill="#E8C7C0"/>
+  <rect x="280" y="200" width="50" height="140" rx="25" fill="#C99A92"/>
+</svg>

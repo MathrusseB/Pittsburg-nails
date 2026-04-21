@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 72" role="img" aria-label="Pittsburg Nail Spa">
+  <title>Pittsburg Nail Spa</title>
+  <g fill="#2A241F">
+    <text x="0" y="34" font-family="Cormorant Garamond, Georgia, serif" font-size="32" font-weight="600" letter-spacing="0.5">Pittsburg</text>
+    <text x="0" y="62" font-family="-apple-system, Segoe UI, sans-serif" font-size="12" letter-spacing="4" fill="#6B7A65">NAIL SPA</text>
+  </g>
+  <circle cx="290" cy="36" r="6" fill="#E8C7C0"/>
+  <circle cx="305" cy="36" r="3" fill="#A8B5A0"/>
+</svg>

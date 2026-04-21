@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder — pedicure detail">
+  <rect width="400" height="400" fill="#E5DDD3"/>
+  <circle cx="200" cy="200" r="140" fill="#FAF6F0"/>
+  <circle cx="200" cy="200" r="80" fill="#A8B5A0" opacity="0.5"/>
+  <circle cx="200" cy="200" r="30" fill="#C99A92"/>
+</svg>
