@@ -1,0 +1,619 @@
+/* components.css — buttons, pricing tables, FAQ, gallery, booking widget */
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-1);
+  padding: 0.75rem 1.25rem;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color var(--dur) var(--ease),
+              border-color var(--dur) var(--ease),
+              color var(--dur) var(--ease),
+              transform var(--dur) var(--ease);
+  text-decoration: none;
+  line-height: 1;
+}
+.btn--primary {
+  background: var(--blush);
+  color: var(--ink);
+}
+.btn--primary:hover,
+.btn--primary:focus-visible {
+  background: var(--blush-deep);
+  color: var(--white);
+  outline: none;
+}
+.btn--secondary {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--ink);
+}
+.btn--secondary:hover,
+.btn--secondary:focus-visible {
+  background: var(--ink);
+  color: var(--cream);
+  outline: none;
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--ink-soft);
+  padding: 0.5rem 0;
+  text-transform: none;
+  letter-spacing: normal;
+  border-radius: 0;
+  border-bottom: 1px solid var(--rule);
+}
+.btn--ghost:hover {
+  color: var(--ink);
+  border-bottom-color: var(--blush);
+}
+.btn:focus-visible {
+  outline: 2px solid var(--blush-deep);
+  outline-offset: 3px;
+}
+
+/* ── Image placeholder ── */
+.img-card {
+  border-radius: var(--radius-img);
+  border: 1px solid var(--rule);
+  overflow: hidden;
+  background: var(--white);
+}
+.img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── Services ── */
+.services__intro {
+  max-width: 55ch;
+  margin-bottom: var(--s-4);
+}
+.service-tiers {
+  display: grid;
+  gap: var(--s-3);
+  margin-bottom: var(--s-4);
+}
+.service-tier {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-img);
+  padding: var(--s-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+}
+.service-tier__name {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: var(--ink);
+}
+.service-tier__desc {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+.service-tier__price {
+  margin-top: auto;
+  padding-top: var(--s-2);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-1);
+  border-top: 1px solid var(--rule);
+}
+.service-tier__price-item {
+  display: flex;
+  flex-direction: column;
+}
+.service-tier__price-label {
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--sage-deep);
+}
+.service-tier__price-value {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+@media (min-width: 720px) {
+  .service-tiers { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Add-ons */
+.service-addons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2) var(--s-4);
+  padding: var(--s-2) 0 var(--s-4);
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+.service-addons strong {
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  font-size: var(--fs-label);
+  margin-right: var(--s-1);
+}
+
+/* Expandable full menu */
+.menu-details {
+  border-top: 1px solid var(--rule);
+}
+.menu-details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: var(--s-3) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--ink);
+  transition: color var(--dur) var(--ease);
+}
+.menu-details > summary::-webkit-details-marker { display: none; }
+.menu-details > summary::after {
+  content: "+";
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  color: var(--blush-deep);
+  transition: transform var(--dur) var(--ease);
+}
+.menu-details[open] > summary::after {
+  content: "−";
+}
+.menu-details > summary:hover { color: var(--blush-deep); }
+
+.menu-details__body {
+  padding-bottom: var(--s-3);
+}
+
+.menu-group {
+  padding: var(--s-2) 0 var(--s-3);
+}
+.menu-group h4 {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  margin-bottom: var(--s-2);
+  color: var(--ink);
+  font-weight: 600;
+}
+.menu-list {
+  display: grid;
+  gap: var(--s-1);
+}
+.menu-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: var(--s-2);
+  align-items: baseline;
+  padding: var(--s-1) 0;
+  border-bottom: 1px dotted var(--rule);
+  font-size: var(--fs-small);
+}
+.menu-item__name { color: var(--ink); }
+.menu-item__desc {
+  grid-column: 1 / -1;
+  font-size: var(--fs-label);
+  color: var(--ink-soft);
+  margin-top: -4px;
+}
+.menu-item__price {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--ink);
+  font-weight: 600;
+  min-width: 3.5rem;
+  text-align: right;
+}
+.menu-item__price--card {
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+.menu-prices-head {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: var(--s-2);
+  padding-bottom: var(--s-1);
+  border-bottom: 1px solid var(--rule);
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--sage-deep);
+}
+.menu-prices-head span:not(:first-child) {
+  min-width: 3.5rem;
+  text-align: right;
+}
+
+/* Menu not-yet-available notice */
+.menu-notice {
+  background: var(--cream);
+  border: 1px dashed var(--rule);
+  border-radius: var(--radius);
+  padding: var(--s-3);
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+/* ── Price tables (services) ── */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-small);
+  margin-top: var(--s-3);
+}
+.price-table caption {
+  font-family: var(--font-serif);
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: left;
+  padding-bottom: var(--s-2);
+  caption-side: top;
+}
+.price-table thead th {
+  font-family: var(--font-sans);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  text-align: right;
+  padding: var(--s-1) 0;
+  border-bottom: 1px solid var(--rule);
+}
+.price-table thead th:first-child { text-align: left; }
+.price-table tbody td {
+  padding: var(--s-2) 0;
+  border-bottom: 1px dotted var(--rule);
+  vertical-align: top;
+}
+.price-table tbody tr:last-child td { border-bottom: 0; }
+.price-table td.price {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  color: var(--ink);
+  font-weight: 600;
+  text-align: right;
+  white-space: nowrap;
+  padding-left: var(--s-2);
+  min-width: 4rem;
+}
+.price-table td.price--card {
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+.price-table .service-name {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  color: var(--ink);
+  font-weight: 600;
+  display: block;
+}
+.price-table .service-desc {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.8125rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+  max-width: 48ch;
+}
+
+/* Collapse price columns on very narrow screens */
+@media (max-width: 520px) {
+  .price-table thead th.price--card,
+  .price-table tbody td.price--card {
+    display: none;
+  }
+  .price-table .service-desc {
+    max-width: none;
+  }
+}
+
+/* Secondary menu block (inside <details>) */
+.menu-block {
+  padding-block: var(--s-3);
+  border-top: 1px solid var(--rule);
+}
+.menu-block:first-of-type { border-top: 0; }
+.menu-block h3 {
+  font-family: var(--font-serif);
+  font-size: 1.375rem;
+  margin-bottom: var(--s-1);
+}
+.menu-block p.service-note {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+  margin-bottom: var(--s-2);
+}
+
+/* ── Why us ── */
+.values {
+  display: grid;
+  gap: var(--s-4);
+  margin-top: var(--s-4);
+}
+.value h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--s-1);
+}
+.value p {
+  font-size: var(--fs-small);
+}
+@media (min-width: 720px) {
+  .values { grid-template-columns: repeat(3, 1fr); gap: var(--s-5); }
+}
+
+/* ── Group bookings callout ── */
+.group-callout {
+  background: var(--sage);
+  color: var(--ink);
+  border-radius: var(--radius-img);
+  padding: var(--s-4);
+  display: grid;
+  gap: var(--s-2);
+  margin-top: var(--s-5);
+}
+.group-callout h3 {
+  color: var(--ink);
+  margin: 0;
+}
+.group-callout p {
+  color: var(--ink);
+  margin: 0;
+}
+.group-callout .btn--primary {
+  justify-self: start;
+}
+@media (min-width: 720px) {
+  .group-callout {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: var(--s-5);
+    padding: var(--s-4) var(--s-5);
+  }
+}
+
+/* ── FAQ ── */
+.faq-list {
+  margin-top: var(--s-4);
+  border-top: 1px solid var(--rule);
+}
+.faq-item {
+  border-bottom: 1px solid var(--rule);
+}
+.faq-item > summary {
+  list-style: none;
+  padding: var(--s-3) 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s-3);
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  color: var(--ink);
+}
+.faq-item > summary::-webkit-details-marker { display: none; }
+.faq-item > summary::after {
+  content: "+";
+  color: var(--blush-deep);
+  font-size: 1.5rem;
+  transition: transform var(--dur) var(--ease);
+}
+.faq-item[open] > summary::after { content: "−"; }
+.faq-item__body {
+  padding: 0 0 var(--s-3);
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+  max-width: 60ch;
+}
+
+/* ── Reviews callout (replaces fake testimonials) ── */
+.reviews-callout {
+  text-align: center;
+  padding: var(--s-4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-img);
+  margin-top: var(--s-4);
+  background: var(--white);
+}
+.reviews-callout p {
+  margin-bottom: var(--s-3);
+}
+.reviews-callout__links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+}
+
+/* ── Visit ── */
+.visit-details dl {
+  display: grid;
+  gap: var(--s-3);
+}
+.visit-details dt {
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  margin-bottom: 2px;
+}
+.visit-details dd {
+  font-size: 1.0625rem;
+  color: var(--ink);
+  margin: 0;
+}
+.visit-details dd a {
+  border-bottom: 1px solid var(--blush);
+}
+.visit-details dd a:hover {
+  border-bottom-color: var(--blush-deep);
+}
+.hours-list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px var(--s-3);
+}
+.hours-list dt, .hours-list dd {
+  font-size: var(--fs-small);
+  margin: 0;
+}
+.hours-list dt {
+  font-family: var(--font-sans);
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--ink-soft);
+}
+
+/* ── Social icons ── */
+.socials {
+  display: flex;
+  gap: var(--s-2);
+}
+.socials a {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease), background-color var(--dur) var(--ease);
+}
+.socials a:hover,
+.socials a:focus-visible {
+  color: var(--ink);
+  background: var(--blush);
+  border-color: var(--blush);
+  outline: none;
+}
+.socials svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* ── Booking form ── */
+.booking {
+  background: var(--white);
+  border-top: var(--rule-w) solid var(--rule);
+  border-bottom: var(--rule-w) solid var(--rule);
+}
+.booking__intro {
+  max-width: 52ch;
+  margin-bottom: var(--s-4);
+}
+.booking__form {
+  max-width: 640px;
+  margin-inline: auto;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-img);
+  padding: var(--s-4);
+  display: grid;
+  gap: var(--s-3);
+}
+.booking__row {
+  display: grid;
+  gap: var(--s-1);
+}
+.booking__row--split {
+  grid-template-columns: 1fr;
+  gap: var(--s-3);
+}
+@media (min-width: 560px) {
+  .booking__row--split { grid-template-columns: 1fr 1fr; }
+}
+.booking__label {
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  font-weight: 600;
+}
+.booking__label .required {
+  color: var(--blush-deep);
+  margin-left: 2px;
+}
+.booking__input,
+.booking__select,
+.booking__textarea {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--ink);
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.booking__textarea {
+  resize: vertical;
+  min-height: 80px;
+  line-height: 1.5;
+}
+.booking__select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none' stroke='%235C534B' stroke-width='1.5'><path d='M1 1.5 L6 6.5 L11 1.5'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 12px 8px;
+  padding-right: 2rem;
+}
+.booking__input:focus,
+.booking__select:focus,
+.booking__textarea:focus {
+  outline: none;
+  border-color: var(--blush-deep);
+  box-shadow: 0 0 0 3px rgba(201, 154, 146, 0.2);
+}
+.booking__submit-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  align-items: stretch;
+  padding-top: var(--s-1);
+}
+.booking__submit-row .btn--primary {
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+}
+@media (min-width: 560px) {
+  .booking__submit-row { flex-direction: row; align-items: center; justify-content: space-between; }
+  .booking__submit-row .btn--primary { width: auto; }
+}
+.booking__fallback {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+  text-align: center;
+  margin-top: var(--s-2);
+}
+.booking__fallback a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--blush);
+}
+.booking__fallback a:hover { border-bottom-color: var(--blush-deep); }
+.booking__hint {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}

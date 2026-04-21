@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder — nail art close-up">
+  <rect width="400" height="400" fill="#FAF6F0"/>
+  <rect x="0" y="0" width="200" height="400" fill="#E8C7C0" opacity="0.5"/>
+  <rect x="200" y="0" width="200" height="400" fill="#A8B5A0" opacity="0.4"/>
+  <circle cx="100" cy="200" r="30" fill="#C99A92"/>
+  <circle cx="100" cy="120" r="18" fill="#FAF6F0"/>
+  <circle cx="100" cy="280" r="18" fill="#FAF6F0"/>
+  <circle cx="300" cy="200" r="30" fill="#6B7A65"/>
+  <circle cx="300" cy="120" r="18" fill="#FAF6F0"/>
+  <circle cx="300" cy="280" r="18" fill="#FAF6F0"/>
+</svg>

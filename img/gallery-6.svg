@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder — spa pedicure station">
+  <rect width="400" height="400" fill="#E5DDD3"/>
+  <rect x="0" y="240" width="400" height="160" fill="#A8B5A0" opacity="0.45"/>
+  <rect x="60" y="140" width="280" height="140" rx="70" fill="#FAF6F0"/>
+  <rect x="90" y="170" width="220" height="90" rx="40" fill="#E8C7C0" opacity="0.6"/>
+</svg>

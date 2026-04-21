@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found — Pittsburg Nail Spa</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .notfound {
+      min-height: 80vh;
+      display: grid;
+      place-items: center;
+      padding: var(--s-5) var(--content-pad);
+      text-align: center;
+    }
+    .notfound h1 { font-size: var(--fs-h1); margin-bottom: var(--s-2); }
+    .notfound p { max-width: 40ch; margin: 0 auto var(--s-4); }
+    .notfound__ctas { display: flex; gap: var(--s-2); justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <main class="notfound">
+    <div>
+      <span class="section-label">404</span>
+      <h1>That page wandered off.</h1>
+      <p>Try heading back home, or give us a call if you&rsquo;re looking for something specific.</p>
+      <div class="notfound__ctas">
+        <a class="btn btn--primary" href="/">Back to home</a>
+        <a class="btn btn--secondary" href="tel:+16207150115">Call (620) 715-0115</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
